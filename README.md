@@ -38,4 +38,5 @@ Those files were loaded to the database using SQL Server Import and Export Data.
 SELECT * FROM products;
 GO
 ```
-![AllProd](https://github.com/hamajid/Sales_DataBase_MySQL/blob/main/Media/AllProd.PNG)# MavenToysDataAnalysis
+![AllProd](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/AllProd.PNG) 
+# MavenToysDataAnalysis
