@@ -2,7 +2,7 @@
 
 ![Logo](https://github.com/hamajid/Sales_DataBase_MySQL/blob/main/Media/HA_Logo.png) 
 
-# Maven Toys 
+# Maven ToysData Analysis
 
 Maven Toys is a fictitious chain of stores in Mexico.
 
@@ -39,4 +39,4 @@ SELECT * FROM products;
 GO
 ```
 ![AllProd](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/AllProd.PNG) 
-# MavenToysDataAnalysis
+
