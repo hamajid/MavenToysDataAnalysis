@@ -14,10 +14,6 @@ The data set used for this project was downloaded from ( https://www.mavenanalyt
 
 [About Maven Toys Data](#about-Maven-Toys-Data)<br/>
 [Explore the data ](#Explore-the-data)<br/>
-[Create tables ](#Create-tables)<br/>
-[Manipulating database](#Manipulating)<br/>
-[Querying and exploring the database](#Querying)<br/>
-[Subquery](#Subquery)<br/>
 
 <a name=about-Maven-Toys-Data></a>
 ## About Maven Toys Data
