@@ -30,9 +30,14 @@ Those files were loaded to the database using SQL Server Import and Export Data.
 ## Explore the data
 
 1. Show all products
+I added a "Profit" to know what is the most profitable item.
 ```
-SELECT * FROM products;
+SELECT *, Product_Price-Product_Cost AS Profit FROM products
+ORDER BY Profit DESC;
 GO
 ```
 ![AllProd](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/AllProd.PNG) 
+
+2. Check the inventory level
+
 
