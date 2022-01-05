@@ -29,8 +29,9 @@ Those files were loaded to the database using SQL Server Import and Export Data.
 <a name=Explore-the-data></a>
 ## Explore the data
 
-1. Show all products
-I added a "Profit" to know what is the most profitable item.
+1. products Analysis.
+
+- Calculated the profit by product.
 ```
 SELECT *, Product_Price-Product_Cost AS Profit FROM products
 ORDER BY Profit DESC;
