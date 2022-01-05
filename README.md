@@ -37,7 +37,7 @@ SELECT *, Product_Price-Product_Cost AS Profit FROM products
 ORDER BY Profit DESC;
 GO
 ```
-![AllProd](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/AllProd.PNG) 
+![AllProd](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Profit_Prod.PNG) 
 
 2. Check the inventory level
 
