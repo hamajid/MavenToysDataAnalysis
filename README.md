@@ -1,8 +1,6 @@
-
-
 ![Logo](https://github.com/hamajid/Sales_DataBase_MySQL/blob/main/Media/HA_Logo.png) 
 
-# Maven ToysData Analysis
+# Maven Toys 
 
 Maven Toys is a fictitious chain of stores in Mexico.
 
@@ -14,6 +12,10 @@ The data set used for this project was downloaded from ( https://www.mavenanalyt
 
 [About Maven Toys Data](#about-Maven-Toys-Data)<br/>
 [Explore the data ](#Explore-the-data)<br/>
+[Create tables ](#Create-tables)<br/>
+[Manipulating database](#Manipulating)<br/>
+[Querying and exploring the database](#Querying)<br/>
+[Subquery](#Subquery)<br/>
 
 <a name=about-Maven-Toys-Data></a>
 ## About Maven Toys Data
@@ -31,14 +33,56 @@ Those files were loaded to the database using SQL Server Import and Export Data.
 
 1. products Analysis.
 
-- Calculated the profit by product.
+- Sort products by Cost
 ```
-SELECT *, Product_Price-Product_Cost AS Profit FROM products
+SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price 
+FROM products
+ORDER BY Cost DESC;
+```
+![Prod_Cost](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Cost.PNG) 
+- Sort products by Price
+```
+SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price 
+FROM products
+ORDER BY Price DESC;
+```
+![Prod_Price](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Price.PNG).
+- Calculated and sort products by profit.
+```
+SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price, Product_Price-Product_Cost AS Profit 
+FROM products
 ORDER BY Profit DESC;
-GO
 ```
-![AllProd](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Profit_Prod.PNG) 
+![Prod_Profit](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Profit.PNG) 
 
-2. Check the inventory level
+2. Calculate the Margin and Markup by product.
 
+ >The profit margin and the markup are calculated base on the profit:
+ >Lets use **P** for the gross profit, **C** for cost, and **R** for revenue. 
+  `**P for Profit**, **C for Cost**, **R for Revenue**, **M for Markup**, and **G for Margin**.`
+ >The formulas are:
+					`**P=R-C** in our case is *Product_Price-Product_Cost*.`
+					`**M=P/C=(R-C)/C** in our example is *(Product_Price-Product_Cost)/Product_Cost*.`
+					`**G=P/R=(R-C)/R** in our example is *(Product_Price-Product_Cost)/Product_Price*.`
+
+  
+To express those values as a percentage, we must multiply the result by 100.
+**Calculate the Markup.**
+___
+```
+SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price,
+	(((Product_Price-Product_Cost)/Product_Cost)*100) AS [MarkUp in %]
+FROM products
+ORDER BY [MarkUp in %] Desc;
+```
+![Prod_Profit](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Profit.PNG) 
+**Calculate the Margin.**
+___
+```
+SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price,
+	(((Product_Price-Product_Cost)/Product_Price)*100) AS [Margin in %]
+FROM products
+ORDER BY  [Margin in %] DESC;
+```
+![Prod_Profit](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Profit.PNG) 
 
