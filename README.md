@@ -60,7 +60,8 @@ ORDER BY Profit DESC;
 
 The profit margin and the markup are calculated base on the profit:
 Lets use **P** for the gross profit, **C** for cost, and **R** for revenue. 
-```**P for Profit**, **C for Cost**, **R for Revenue**, **M for Markup**, and **G for Margin**.```
+
+**P for Profit**, **C for Cost**, **R for Revenue**, **M for Markup**, and **G for Margin**.
 
 The formulas are
 
