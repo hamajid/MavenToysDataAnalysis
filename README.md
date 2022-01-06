@@ -31,7 +31,7 @@ Those files were loaded to the database using SQL Server Import and Export Data.
 <a name=Explore-the-data></a>
 ## Explore the data
 
-1. products Analysis.
+###1. products Analysis.
 
 - Sort products by Cost
 ```
@@ -55,7 +55,7 @@ ORDER BY Profit DESC;
 ```
 ![Prod_Profit](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Profit.PNG) 
 
-2. Calculate the Margin and Markup by product.
+###2. Calculate the Margin and Markup by product.
 
 The profit margin and the markup are calculated base on the profit:
 Lets use **P** for the gross profit, **C** for cost, and **R** for revenue. 
