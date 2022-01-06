@@ -32,21 +32,22 @@ ___
 >**Product.**
 ___
 
-**1.Sort products by Cost.**
+**1.Products by Cost.**
 ```
 SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price 
 FROM products
 ORDER BY Cost DESC;
 ```
 ![Prod_Cost](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Cost.PNG) 
-**2.Sort products by Price.**
+
+**2.Products by Price.**
 ```
 SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price 
 FROM products
 ORDER BY Price DESC;
 ```
 ![Prod_Price](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Price.PNG).
-**3.Calculate thep rofit by product.**
+**3.Calculate the gross profit by product.**
 ```
 SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price, Product_Price-Product_Cost AS Profit 
 FROM products
