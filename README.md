@@ -65,11 +65,11 @@ Lets use **P** for the gross profit, **C** for cost, and **R** for revenue.
 
 The formulas are
 
->```**P=R-C** in our case is *Product_Price-Product_Cost*.```
+>**P=R-C** in our case is *Product_Price-Product_Cost*.
 
->```**M=P/C=(R-C)/C** in our example is *(Product_Price-Product_Cost)/Product_Cost*.```
+>**M=P/C=(R-C)/C** in our example is *(Product_Price-Product_Cost)/Product_Cost*.
 
->```**G=P/R=(R-C)/R** in our example is *(Product_Price-Product_Cost)/Product_Price*.```
+>**G=P/R=(R-C)/R** in our example is *(Product_Price-Product_Cost)/Product_Price*
   
 To express those values as a percentage, we must multiply the result by 100.
 
