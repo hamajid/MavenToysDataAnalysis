@@ -59,11 +59,15 @@ ORDER BY Profit DESC;
 
 The profit margin and the markup are calculated base on the profit:
 Lets use **P** for the gross profit, **C** for cost, and **R** for revenue. 
-`**P for Profit**, **C for Cost**, **R for Revenue**, **M for Markup**, and **G for Margin**.`
-The formulas are:
->`**P=R-C** in our case is *Product_Price-Product_Cost*.`
->`**M=P/C=(R-C)/C** in our example is *(Product_Price-Product_Cost)/Product_Cost*.`
->`**G=P/R=(R-C)/R** in our example is *(Product_Price-Product_Cost)/Product_Price*.`
+```**P for Profit**, **C for Cost**, **R for Revenue**, **M for Markup**, and **G for Margin**.```
+
+The formulas are
+
+>```**P=R-C** in our case is *Product_Price-Product_Cost*.```
+
+>```**M=P/C=(R-C)/C** in our example is *(Product_Price-Product_Cost)/Product_Cost*.```
+
+>```**G=P/R=(R-C)/R** in our example is *(Product_Price-Product_Cost)/Product_Price*.```
   
 To express those values as a percentage, we must multiply the result by 100.
 **Calculate the Markup.**
