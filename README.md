@@ -28,9 +28,10 @@ Those files were loaded to the database using SQL Server Import and Export Data.
 <a name=Explore-the-data></a>
 ## Exploring and analysing the data
 
+___
 >**Product.**
 ___
-___
+
 **1.Sort products by Cost.**
 ```
 SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price 
@@ -78,7 +79,7 @@ ORDER BY [MarkUp in %] Desc;
 ```
 ![MarkUp](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Markup.PNG) 
 
-***4.Calculate the Margin.***
+***4.2.Calculate the Margin.***
 ```
 SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price,
 	(((Product_Price-Product_Cost)/Product_Price)*100) AS [Margin in %]
