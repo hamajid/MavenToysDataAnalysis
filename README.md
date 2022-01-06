@@ -70,6 +70,7 @@ The formulas are
 >```**G=P/R=(R-C)/R** in our example is *(Product_Price-Product_Cost)/Product_Price*.```
   
 To express those values as a percentage, we must multiply the result by 100.
+
 **Calculate the Markup.**
 ___
 ```
@@ -79,6 +80,7 @@ FROM products
 ORDER BY [MarkUp in %] Desc;
 ```
 ![MarkUp](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Markup.PNG) 
+
 **Calculate the Margin.**
 ___
 ```
