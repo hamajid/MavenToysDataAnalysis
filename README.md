@@ -57,14 +57,13 @@ ORDER BY Profit DESC;
 
 2. Calculate the Margin and Markup by product.
 
- >The profit margin and the markup are calculated base on the profit:
- >Lets use **P** for the gross profit, **C** for cost, and **R** for revenue. 
+The profit margin and the markup are calculated base on the profit:
+Lets use **P** for the gross profit, **C** for cost, and **R** for revenue. 
   `**P for Profit**, **C for Cost**, **R for Revenue**, **M for Markup**, and **G for Margin**.`
- >The formulas are:
-					`**P=R-C** in our case is *Product_Price-Product_Cost*.`
-					`**M=P/C=(R-C)/C** in our example is *(Product_Price-Product_Cost)/Product_Cost*.`
-					`**G=P/R=(R-C)/R** in our example is *(Product_Price-Product_Cost)/Product_Price*.`
-
+The formulas are:
+		>`**P=R-C** in our case is *Product_Price-Product_Cost*.`
+		>`**M=P/C=(R-C)/C** in our example is *(Product_Price-Product_Cost)/Product_Cost*.`
+		>`**G=P/R=(R-C)/R** in our example is *(Product_Price-Product_Cost)/Product_Price*.`
   
 To express those values as a percentage, we must multiply the result by 100.
 **Calculate the Markup.**
@@ -75,7 +74,7 @@ SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Co
 FROM products
 ORDER BY [MarkUp in %] Desc;
 ```
-![Prod_Profit](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Profit.PNG) 
+![MarkUp](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Markup.PNG) 
 **Calculate the Margin.**
 ___
 ```
@@ -84,5 +83,5 @@ SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Co
 FROM products
 ORDER BY  [Margin in %] DESC;
 ```
-![Prod_Profit](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Profit.PNG) 
+![Margin](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Margin.PNG) 
 
