@@ -47,6 +47,7 @@ FROM products
 ORDER BY Price DESC;
 ```
 ![Prod_Price](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Prod_Price.PNG).
+
 **3.Calculate the gross profit by product.**
 ```
 SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price, Product_Price-Product_Cost AS Profit 
