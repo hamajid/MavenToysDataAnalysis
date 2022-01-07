@@ -19,10 +19,11 @@ The data set used for this project was downloaded from ( https://www.mavenanalyt
 
 The Maven Toys sales and inventory data include information about products, stores, daily sales transactions. and current inventory levels at each location.
 The data set is composed of 4 CSV files:
-- Inventory
 - Products
-- Sales
 - Stores
+- Inventory
+- Sales
+
 Those files were loaded to the database using SQL Server Import and Export Data.
 
 <a name=Explore-the-data></a>
