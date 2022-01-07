@@ -28,7 +28,6 @@ Those files were loaded to the database using SQL Server Import and Export Data.
 
 <a name=Explore-the-data></a>
 ## Exploring and analysing the data
-___
 
 <a name=Products></a>
 >**Products.**
