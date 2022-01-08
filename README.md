@@ -92,3 +92,4 @@ ORDER BY  [Margin in %] DESC;
 ```
 ![Margin](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Margin.PNG) 
 
+
