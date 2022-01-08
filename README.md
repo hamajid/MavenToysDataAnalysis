@@ -30,7 +30,7 @@ Those files were loaded to the database using SQL Server Import and Export Data.
 ## Exploring and analysing the data
 
 <a name=Products></a>
->**Products.**
+>***Products.***
 
 
 **1.Products by Cost.**
