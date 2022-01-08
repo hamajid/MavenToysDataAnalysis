@@ -12,7 +12,7 @@ The data set used for this project was downloaded from ( https://www.mavenanalyt
 
 **[About Maven Toys Data](#about-Maven-Toys-Data)<br/>**
 **[Exploring and analysing the data](#Explore-the-data)<br/>**
-> -[Products](#Products)<br/>
+> ***[Products](#Products)<br/>***
 
 <a name=about-Maven-Toys-Data></a>
 ## About Maven Toys Data
