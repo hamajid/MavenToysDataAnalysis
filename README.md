@@ -140,3 +140,30 @@ FROM STORES
 Order By [Years] DESC;
 ```
 ![Stores_Age](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_Age.PNG)
+
+<a name=Inventory></a>
+>***Inventory.***
+
+Lets check the available quatity of each product
+
+```
+SELECT P.Product_Name AS [Product Name], COUNT(I.Stock_On_Hand) AS [Available Quantity]
+FROM Inventory AS I, Stores AS S, Products AS P
+WHERE
+P.Product_ID = I.Product_ID 
+GROUP BY Product_Name
+ORDER BY [Available Quantity] ;
+```
+
+Lets check the available quatity of each product for every store
+
+
+```
+SELECT S.Store_Name AS [Store], P.Product_Name AS [Product Name],  I.Stock_On_Hand AS [Available Quantity]
+FROM Inventory AS I, Stores AS S, Products AS P
+WHERE
+P.Product_ID = I.Product_ID AND
+S.Store_ID = I.Store_ID
+ORDER BY [Store], [Available Quantity] ;
+```
+
