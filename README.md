@@ -170,3 +170,4 @@ ORDER BY [Store], [Available Quantity] ;
 
 ![T_InvByStore](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/T_InvByStore.PNG)
 
+
