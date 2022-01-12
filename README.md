@@ -154,6 +154,7 @@ P.Product_ID = I.Product_ID
 GROUP BY Product_Name
 ORDER BY [Available Quantity] ;
 ```
+![T_InvByPrd] https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/T_InvByPrd.PNG
 
 Lets check the available quatity of each product for every store
 
@@ -166,4 +167,6 @@ P.Product_ID = I.Product_ID AND
 S.Store_ID = I.Store_ID
 ORDER BY [Store], [Available Quantity] ;
 ```
+
+![T_InvByStore] https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/T_InvByStore.PNG
 
