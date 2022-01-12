@@ -11,7 +11,7 @@ The data set used for this project was downloaded from ( https://www.mavenanalyt
 ### Contents
 
 **[About Maven Toys Data](#about-Maven-Toys-Data)<br/>**
-**[Exploring and analysing the data](#Explore-the-data)<br/>**
+**[Exploring the data](#Explore-the-data)<br/>**
 > ***[Products](#Products)<br/>***
 > ***[Stores](#Stores)<br/>***
 
@@ -28,7 +28,7 @@ The data set is composed of 4 CSV files:
 Those files were loaded to the database using SQL Server Import and Export Data.
 
 <a name=Explore-the-data></a>
-## Exploring and analysing the data
+## Exploring the data
 
 <a name=Products></a>
 >***Products.***
