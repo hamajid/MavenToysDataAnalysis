@@ -122,7 +122,7 @@ FROM STORES
 Group by Store_City, Store_Location
 Order By City DESC;
 ```
-![Stores_City_Loc]https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_City_Loc.PNG
+![Stores_City_Loc](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_City_Loc.PNG)
 
 From the result, I noticed that cities don't have the same type of store twice ( Example: Cuidad de Mexico has 4 stores and none of them is in the same type as others).
 
@@ -138,4 +138,4 @@ Round(((DATEDIFF (DAY, Store_Open_Date, GETDATE())%365)%30),0) As [Days]
 FROM STORES
 Order By [Years] DESC;
 ```
-![Stores_Age]https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_Age.PNG
+![Stores_Age](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_Age.PNG)
