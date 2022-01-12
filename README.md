@@ -94,6 +94,7 @@ ORDER BY  [Margin in %] DESC;
 ![Margin](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Margin.PNG) 
 
 <a name=Stores></a>
+
 > ***[Stores](#Stores)<br/>***
 
 **1.Number of Stores.**
@@ -126,7 +127,7 @@ Order By City DESC;
 
 From the result, I noticed that cities don't have the same type of store twice ( Example: Cuidad de Mexico has 4 stores and none of them is in the same type as others).
 
-**.3 Store Age.**
+**3. Store Age.**
 
 In the following query, we will use the date dif function to calculate the difference between the Store_Open_Date and today (01/07/2022). Knowing the age it's an important element to understand its performance.
 
