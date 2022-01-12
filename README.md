@@ -13,6 +13,7 @@ The data set used for this project was downloaded from ( https://www.mavenanalyt
 **[About Maven Toys Data](#about-Maven-Toys-Data)<br/>**
 **[Exploring and analysing the data](#Explore-the-data)<br/>**
 > ***[Products](#Products)<br/>***
+> ***[Stores](#Stores)<br/>***
 
 <a name=about-Maven-Toys-Data></a>
 ## About Maven Toys Data
@@ -92,13 +93,6 @@ ORDER BY  [Margin in %] DESC;
 ```
 ![Margin](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Margin.PNG) 
 
-SELECT Product_Name AS Product, Product_Category AS Category, Product_Cost AS Cost, Product_Price AS Price,
-	(((Product_Price-Product_Cost)/Product_Price)*100) AS [Margin in %]
-FROM products
-ORDER BY  [Margin in %] DESC;
-```
-![Margin](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Margin.PNG) 
-
 <a name=Stores></a>
 > ***[Stores](#Stores)<br/>***
 
@@ -119,7 +113,6 @@ FROM STORES
 Group by Store_City
 Order By [Total number of Stores] DESC;
 ```
-
 ![Stores_City](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_City.PNG)
 
 Filter the stores by City and Type.
@@ -129,7 +122,6 @@ FROM STORES
 Group by Store_City, Store_Location
 Order By City DESC;
 ```
-
 ![Stores_City_Loc]https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_City_Loc.PNG
 
 From the result, I noticed that cities don't have the same type of store twice ( Example: Cuidad de Mexico has 4 stores and none of them is in the same type as others).
@@ -140,11 +132,10 @@ In the following query, we will use the date dif function to calculate the diffe
 
 ```
 SELECT  Store_Name AS Name, Store_City AS City, Store_Location AS [Type], (DATEDIFF (Day, Store_Open_Date, GETDATE())) As  [Age in Days],
-																		Round (((DATEDIFF (DAY, Store_Open_Date, GETDATE())/365)),0) As [Years], 
-																		Round(((DATEDIFF (DAY, Store_Open_Date, GETDATE())%365)/30),0) As [Months],
-																		Round(((DATEDIFF (DAY, Store_Open_Date, GETDATE())%365)%30),0) As [Days]
+Round (((DATEDIFF (DAY, Store_Open_Date, GETDATE())/365)),0) As [Years], 
+Round(((DATEDIFF (DAY, Store_Open_Date, GETDATE())%365)/30),0) As [Months],
+Round(((DATEDIFF (DAY, Store_Open_Date, GETDATE())%365)%30),0) As [Days]
 FROM STORES
 Order By [Years] DESC;
 ```
-
 ![Stores_Age]https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_Age.PNG
