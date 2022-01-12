@@ -119,6 +119,7 @@ FROM STORES
 Group by Store_City
 Order By [Total number of Stores] DESC;
 ```
+
 ![Stores_City](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_City.PNG)
 
 Filter the stores by City and Type.
@@ -128,6 +129,7 @@ FROM STORES
 Group by Store_City, Store_Location
 Order By City DESC;
 ```
+
 ![Stores_City_Loc]https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_City_Loc.PNG
 
 From the result, I noticed that cities don't have the same type of store twice ( Example: Cuidad de Mexico has 4 stores and none of them is in the same type as others).
@@ -144,4 +146,5 @@ SELECT  Store_Name AS Name, Store_City AS City, Store_Location AS [Type], (DATED
 FROM STORES
 Order By [Years] DESC;
 ```
+
 ![Stores_Age]https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Stores_Age.PNG
