@@ -14,6 +14,7 @@ The data set used for this project was downloaded from ( https://www.mavenanalyt
 **[Exploring the data](#Explore-the-data)<br/>**
 > ***[Products](#Products)<br/>***
 > ***[Stores](#Stores)<br/>***
+> ***[Inventory](#Inventory)<br/>***
 
 <a name=about-Maven-Toys-Data></a>
 ## About Maven Toys Data
