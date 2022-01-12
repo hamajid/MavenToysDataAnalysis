@@ -94,8 +94,7 @@ ORDER BY  [Margin in %] DESC;
 ![Margin](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Margin.PNG) 
 
 <a name=Stores></a>
-
-> ***[Stores](#Stores)<br/>***
+> ***Stores.***
 
 **1.Number of Stores.**
 Lets check how many stores does the company have.
