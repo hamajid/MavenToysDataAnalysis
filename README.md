@@ -97,6 +97,7 @@ ORDER BY  [Margin in %] DESC;
 > ***Stores.***
 
 **1.Number of Stores.**
+
 Lets check how many stores does the company have.
 ```
 SELECT COUNT(Store_Name) AS [Total number of Stores]
