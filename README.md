@@ -16,6 +16,8 @@ The data set used for this project was downloaded from ( https://www.mavenanalyt
 > ***[Stores](#Stores)<br/>***
 > ***[Inventory](#Inventory)<br/>***
 > ***[Sales](#Sales)<br/>***
+> ***[Sales Year to Year Comparaison] (#SalesY2Y)<br/>.***
+> ***[Summary] (#Summary)<br/>.***
 
 <a name=about-Maven-Toys-Data></a>
 ## About Maven Toys Data
@@ -313,3 +315,28 @@ GROUP By City
 Order by [Total Profit In Thousand]DESC;
 ```
 ![Total_Rev_City](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_City.PNG)
+
+<a name=SalesY2Y></a>
+>***Sales Year to Year Comparaison .***
+
+**1.Total Revenue, Cost, Quantity and Profit by Year.**
+
+```
+Select 
+		Year([Order Date]) AS [Year],
+		ROUND((SUM ([Order Price]))/1000000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000000,2) AS [Total Cost In Thousand],
+		ROUND((SUM ([Quantity]))/1000000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand],
+		ROUND(((SUM ([Order Price])-SUM([Order Cost]))/Sum([Order Price])*100),2) AS [Profit Margin In Percentage]
+from v_Order
+GROUP By Year([Order Date])
+Order by [Total Profit In Thousand]DESC;
+```
+![Total_Rev_Yr](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_Yr.PNG)
+
+<a name=Summary></a>
+>***Summary.***
+
+The Maven Toys comapny has been in the business for over 29 years, it has 50 stores operating in 29 City.
+In 2017, Maven made $7.48 million as a revenue ($2.19 million as net profit), however in 2018 the gross income was decreased by 7.5%.
