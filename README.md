@@ -248,7 +248,7 @@ from v_Order
 GROUP By Product
 Order by [Total Profit In Thousand]DESC;
 ```
-![Total_Rev_Prd](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_prd.PNG)
+![Total_Rev_Prd](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_Prd.PNG)
 
 **3.Total Revenue, Cost, Quantity and Profit by Product Category.**
 
