@@ -207,7 +207,7 @@ O.Product_ID = P.Product_ID
 INNER JOIN Stores AS S
 ON
 O.Store_ID = S.Store_ID;
-
+```
 
 **1.Total Revenue, Cost and Profit.**
 
