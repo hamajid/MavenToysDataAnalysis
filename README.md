@@ -158,7 +158,24 @@ ORDER BY [Available Quantity] ;
 ```
 ![Inv_Cost_Prd](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Inv_Cost_Prd.PNG)
 
-The inventory cost by Product and by store
+The inventory cost by Store
+
+```
+SELECT S.Store_Name AS [Store], SUM(I.Stock_On_Hand) AS [Available Quantity], SUM(I.Stock_On_Hand * Product_Cost) AS [Inv Cost]
+FROM Stores AS S
+INNER JOIN Inventory AS I
+ON
+S.Store_ID = I.Store_ID 
+INNER JOIN Products AS P
+ON
+P.Product_ID = I.Product_ID 
+GROUP BY Store_Name
+ORDER BY [Available Quantity] ;
+```
+![Inv_Cost_Str](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Inv_Cost_Str.PNG)
+
+
+The inventory cost by Store and Product
 
 ```
 SELECT S.Store_Name AS [Store], P.Product_Name AS [Product Name],  I.Stock_On_Hand AS [Available Quantity], (I.Stock_On_Hand * Product_Cost) AS [Inv Cost]
@@ -172,5 +189,4 @@ P.Product_ID = I.Product_ID
 ORDER BY [Store], [Available Quantity] DESC ;
 ```
 ![Inv_Cost_Prd_Str](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Inv_Cost_Prd_Str.PNG)
-
 
