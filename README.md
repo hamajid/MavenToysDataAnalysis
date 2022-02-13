@@ -218,4 +218,5 @@ Select  FORMAT(ROUND((SUM ([Order Price]))/1000000,2),'C') AS [Total Revenue In 
 		ROUND(((SUM ([Order Price])-SUM([Order Cost]))/Sum([Order Price])*100),2) AS [Profit Margin In Percentage]
 from v_Order;
 ```
+
 ![Order_Rev](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Order_Rev.PNG)
