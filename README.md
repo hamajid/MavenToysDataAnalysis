@@ -11,10 +11,11 @@ The data set used for this project was downloaded from ( https://www.mavenanalyt
 ### Contents
 
 **[About Maven Toys Data](#about-Maven-Toys-Data)<br/>**
-**[Exploring the data](#Explore-the-data)<br/>**
+**[Exploring and Analyzing the data](#Explore-the-data)<br/>**
 > ***[Products](#Products)<br/>***
 > ***[Stores](#Stores)<br/>***
 > ***[Inventory](#Inventory)<br/>***
+> ***[Sales](#Sales)<br/>***
 
 <a name=about-Maven-Toys-Data></a>
 ## About Maven Toys Data
@@ -29,7 +30,7 @@ The data set is composed of 4 CSV files:
 Those files were loaded to the database using SQL Server Import and Export Data.
 
 <a name=Explore-the-data></a>
-## Exploring the data
+## Exploring and Analyzing the data
 
 <a name=Products></a>
 >***Products.***
@@ -189,4 +190,22 @@ P.Product_ID = I.Product_ID
 ORDER BY [Store], [Available Quantity] DESC ;
 ```
 ![Inv_Cost_Prd_Str](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Inv_Cost_Prd_Str.PNG)
+
+<a name=Sales></a>
+>***Sales.***
+
+To make it easy and simple, I created a view and I joined related tables for a better I/O management. 
+```
+Create VIEW v_Order AS 
+SELECT 
+	Sale_ID AS [Order #], Date AS [Order Date], Units AS [Quantity], Store_Name AS [Store Name], Store_City AS City, Store_Location AS [Store Type],
+	Product_Name AS Product, Product_Category AS Category, Product_Cost * Units AS [Order Cost], Product_Price * Units AS [Order Price], (Product_Price-Product_Cost)*units AS [Net Profit]
+FROM Sales AS O 
+INNER JOIN Products AS P
+ON
+O.Product_ID = P.Product_ID
+INNER JOIN Stores AS S
+ON
+O.Store_ID = S.Store_ID;
+
 
