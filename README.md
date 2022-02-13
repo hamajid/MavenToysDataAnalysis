@@ -145,5 +145,17 @@ Order By [Years] DESC;
 <a name=Inventory></a>
 >***Inventory.***
 
+The inventory cost by product
+
+```
+SELECT P.Product_Name AS [Product Name], SUM(I.Stock_On_Hand) AS [Available Quantity], SUM(I.Stock_On_Hand * Product_Cost) AS [Inv Cost]
+FROM Inventory AS I
+INNER JOIN Products AS P
+ON
+P.Product_ID = I.Product_ID 
+GROUP BY Product_Name
+ORDER BY [Available Quantity] ;
+```
+
 
 
