@@ -16,8 +16,8 @@ The data set used for this project was downloaded from ( https://www.mavenanalyt
 > ***[Stores](#Stores)<br/>***
 > ***[Inventory](#Inventory)<br/>***
 > ***[Sales](#Sales)<br/>***
-> ***[Sales Year to Year Comparaison] (#SalesY2Y)<br/>.***
-> ***[Summary] (#Summary)<br/>.***
+> ***[Sales Year to Year Comparaison](#SalesY2Y)<br/>.***
+> ***[Summary](#Summary)<br/>.***
 
 <a name=about-Maven-Toys-Data></a>
 ## About Maven Toys Data
