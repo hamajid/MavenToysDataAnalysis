@@ -220,3 +220,96 @@ ROUND(((SUM ([Order Price])-SUM([Order Cost]))/Sum([Order Price])*100),2) AS [Pr
 from v_Order;
 ```
 ![Order_Rev](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Order_Rev.PNG)
+
+**1.Total Revenue, Cost, Quantity and Profit.**
+
+```
+Select  
+FORMAT(ROUND((SUM ([Order Price]))/1000000,2),'C') AS [Total Revenue In Million], 
+FORMAT(ROUND((SUM ([Order Cost]))/1000000,2), 'C') AS [Total Cost In Million], 
+ROUND((SUM ([Quantity]))/1000000,2) AS [Total Quantity Sold In Million],
+FORMAT(ROUND((SUM ([Net Profit]))/1000000,2), 'C') AS [Total Profit In Million],
+ROUND(((SUM ([Order Price])-SUM([Order Cost]))/Sum([Order Price])*100),2) AS [Profit Margin In Percentage]
+from v_Order;
+```
+![Total_Rev](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev.PNG)
+
+**2.Total Revenue, Cost, Quantity and Profit by Product.**
+
+```
+Select 
+		Product,
+		ROUND((SUM ([Order Price]))/1000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000,2) AS [Total Cost In Thousand],
+		ROUND((SUM ([Quantity]))/1000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand],
+		ROUND(((SUM ([Order Price])-SUM([Order Cost]))/Sum([Order Price])*100),2) AS [Profit Margin In Percentage]
+from v_Order
+GROUP By Product
+Order by [Total Profit In Thousand]DESC;
+```
+![Total_Rev_Prd](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_prd.PNG)
+
+**3.Total Revenue, Cost, Quantity and Profit by Product Category.**
+
+```
+Select 
+		Category,
+		ROUND((SUM ([Order Price]))/1000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000,2) AS [Total Cost In Thousand], 
+		ROUND((SUM ([Quantity]))/1000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand],
+		ROUND(((SUM ([Order Price])-SUM([Order Cost]))/Sum([Order Price])*100),2) AS [Profit Margin In Percentage]
+from v_Order
+GROUP By Category
+Order by [Total Profit In Thousand]DESC;
+```
+![Total_Rev_Cat](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_Cat.PNG)
+
+**4.Revenue, Cost, Quantity and Profit by Store.**
+
+```
+Select 
+		[Store Name],
+		ROUND((SUM ([Order Price]))/1000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000,2) AS [Total Cost In Thousand], 
+		ROUND((SUM ([Quantity]))/1000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand],
+		ROUND(((SUM ([Order Price])-SUM([Order Cost]))/Sum([Order Price])*100),2) AS [Profit Margin In Percentage]
+from v_Order
+GROUP By [Store Name]
+Order by [Total Profit In Thousand]DESC;
+```
+![Total_Rev_Str](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_Str.PNG)
+
+**5.Total Revenue, Cost, Quantity and Profit by Store Type.**
+
+```
+Select 
+		[Store Type],
+		ROUND((SUM ([Order Price]))/1000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000,2) AS [Total Cost In Thousand], 
+		ROUND((SUM ([Quantity]))/1000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand],
+		ROUND(((SUM ([Order Price])-SUM([Order Cost]))/Sum([Order Price])*100),2) AS [Profit Margin In Percentage]
+from v_Order
+GROUP By [Store Type]
+Order by [Total Profit In Thousand]DESC;
+```
+![Total_Rev_Type](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_Type.PNG)
+
+**6.Total Revenue, Cost, Quantity and Profit by City.**
+
+```
+Select 
+		City,
+		ROUND((SUM ([Order Price]))/1000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000,2) AS [Total Cost In Thousand], 
+		ROUND((SUM ([Quantity]))/1000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand],
+		ROUND(((SUM ([Order Price])-SUM([Order Cost]))/Sum([Order Price])*100),2) AS [Profit Margin In Percentage]
+from v_Order
+GROUP By City
+Order by [Total Profit In Thousand]DESC;
+```
+![Total_Rev_City](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_City.PNG)
