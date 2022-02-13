@@ -335,6 +335,83 @@ Order by [Total Profit In Thousand]DESC;
 ```
 ![Total_Rev_Yr](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_Yr.PNG)
 
+**2.Total Revenue, Cost, Quantity and Profit by Product by year.**
+
+```
+Select  Product,Year([Order Date])AS [Year],
+		ROUND((SUM ([Order Price]))/1000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000,2) AS [Total Cost In Thousand], 
+		ROUND((SUM ([Quantity]))/1000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand]
+		
+from v_Order
+GROUP By Year([Order Date]), Product
+Order by Product, Year([Order Date]),[Total Profit In Thousand]DESC;
+```
+![Total_Rev_Prd_Yr](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_prd_Yr.PNG)
+
+**3.Total Revenue, Cost, Quantity and Profit by Product Category.**
+
+```
+Select  Category, Year([Order Date])AS [Year],
+		ROUND((SUM ([Order Price]))/1000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000,2) AS [Total Cost In Thousand], 
+		ROUND((SUM ([Quantity]))/1000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand]				
+from v_Order
+GROUP By Year([Order Date]), Category
+Order by Category, Year([Order Date]),[Total Profit In Thousand]DESC;
+```
+![Total_Rev_Cat_Yr](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_Cat_Yr.PNG)
+
+**4.Revenue, Cost, Quantity and Profit by Store by Year.**
+
+```
+Select  [Store Name], Year([Order Date])AS [Year],
+		ROUND((SUM ([Order Price]))/1000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000,2) AS [Total Cost In Thousand], 
+		ROUND((SUM ([Quantity]))/1000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand]				
+from v_Order
+GROUP By Year([Order Date]), [Store Name]
+Order by [Store Name], Year([Order Date]),[Total Profit In Thousand]DESC;
+```
+![Total_Rev_Str_Yr](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_Str_Yr.PNG)
+
+**5.Total Revenue, Cost, Quantity and Profit by Store Type by Year.**
+
+```
+Select  [Store Type],Year([Order Date])AS [Year],
+		ROUND((SUM ([Order Price]))/1000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000,2) AS [Total Cost In Thousand], 
+		ROUND((SUM ([Quantity]))/1000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand]				
+from v_Order
+GROUP By Year([Order Date]), [Store Type]
+Order by [Store Type], Year([Order Date]),[Total Profit In Thousand]DESC;
+```
+![Total_Rev_Type_Yr](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_Type_Yr.PNG)
+
+**6.Total Revenue, Cost, Quantity and Profit by City by Year.**
+
+```
+Select  City,Year([Order Date])AS [Year],
+		ROUND((SUM ([Order Price]))/1000,2) AS [Total Revenue In Thousand], 
+		ROUND((SUM ([Order Cost]))/1000,2) AS [Total Cost In Thousand], 
+		ROUND((SUM ([Quantity]))/1000,2) AS [Total Quantity Sold In Thousand],
+		ROUND((SUM ([Net Profit]))/1000,2) AS [Total Profit In Thousand]				
+from v_Order
+GROUP By Year([Order Date]), City
+Order by City, Year([Order Date]),[Total Profit In Thousand]DESC;
+```
+![Total_Rev_City_Yr](https://github.com/hamajid/MavenToysDataAnalysis/blob/main/Media/Total_Rev_City_Yr.PNG)
+
+<a name=Summary></a>
+>***Summary.***
+
+The Maven Toys comapny has been in the business for over 29 years, it has 50 stores operating in 29 City.
+In 2017, Maven made $7.48 million as a revenue ($2.19 million as net profit), however in 2018 the gross income was decreased by 7.5%.
+
 <a name=Summary></a>
 >***Summary.***
 
