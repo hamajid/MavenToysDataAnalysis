@@ -409,11 +409,9 @@ Order by City, Year([Order Date]),[Total Profit In Thousand]DESC;
 <a name=Summary></a>
 >***Summary.***
 
-The Maven Toys comapny has been in the business for over 29 years, it has 50 stores operating in 29 City.
-In 2017, Maven made $7.48 million as a revenue ($2.19 million as net profit), however in 2018 the gross income was decreased by 7.5%.
-
-<a name=Summary></a>
->***Summary.***
-
-The Maven Toys comapny has been in the business for over 29 years, it has 50 stores operating in 29 City.
-In 2017, Maven made $7.48 million as a revenue ($2.19 million as net profit), however in 2018 the gross income was decreased by 7.5%.
+The Maven Toys company has been in the business for over 29 years, it has 50 stores operating in 29 cities.
+In 2017, Maven made $7.48 million as a revenue ($2.19 million as net profit), however, in 2018 the gross income was decreased by 7.5% and shows $6.96 million ($1.82 million in Net sales).
+The Cuidad de Mexico showed the biggest decrease in revenue($ -44K) and the biggest increase was made in Culiacan.
+The Art & Crafts show a huge increase of 75% from 2017 to 2018 while the electronics category is showing the worst decrease of 52%.
+The color buds sales were drastically decreased by losing $368K  (61%) in sales however, the Magic Sand is showing an increase of 768%.
+Unfortunately, we don't have enough data from the previous 5 years and data about customer kid's age to further analyze the cause of the decrease in revenue and to adapt our product to the kids' age
